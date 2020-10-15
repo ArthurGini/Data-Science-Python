@@ -9,12 +9,13 @@ Edit: Arthur Gini
 """Simulating the dice game Craps."""
 import random
 
-#Declarando variaveis estatisticas
-dados =[]
+def win_rate(rodada):
+    rodada.append 
 
-rodada=0
-win =0 
-loose =0
+    wins = []
+
+
+
 
 
 def roll_dice():
@@ -41,41 +42,21 @@ elif sum_of_dice in (2, 3, 12):  # lose
 else:  # remember point
     game_status = 'CONTINUE'
     my_point = sum_of_dice
+    print('Point is', my_point)
 
 # continue rolling until player wins or loses
 while game_status == 'CONTINUE':
     die_values = roll_dice()
     display_dice(die_values)
     sum_of_dice = sum(die_values)
-    
-    #add codigo
-    rodada += 1
 
     if sum_of_dice == my_point:  # win by making point
         game_status = 'WON'
-        
     elif sum_of_dice == 7:  # lose by rolling 7
         game_status = 'LOST'
 
 # display "wins" or "loses" message
 if game_status == 'WON':
     print('Player wins')
-
-    #add codigo
-    print("Rodada", rodada)
-    
-    win += 1
-    dados.insert(rodada, rodada)
-    dados.insert(rodada+1,win)
-    print(dados)
-    
 else:
     print('Player loses')
-
-    #add codigo
-    print("Rodada", rodada)
-    loose += 1
-    dados.insert(rodada, rodada)
-    dados.insert(rodada+2,loose)
-    
-    print(dados)
