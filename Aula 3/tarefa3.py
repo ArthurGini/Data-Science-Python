@@ -18,8 +18,20 @@ Você deverá simular diversas rodadas do CRAPS rastreando o número total de jo
     O que você acha que isso significa?]
     Qual é a média para a duração de um jogo de dados? A mediana? O modo?
     As chances de vitória aumentam com a duração do jogo?
+    
+dados = {
+  "primeira": [
+    {
+      "win": ,
+      "loser": ,
+  }],
+  "segunda": 0,
+}
 """
+
+
 import random as rd
+import json
 
 for i in range(1,10):
   #rd.seed(32)
@@ -29,6 +41,20 @@ for i in range(1,10):
 
 print("win = ", win)
 print("Loose = ", loose)
+
+
+dados = [rodada [win, loose],
+         rodada [win, loose]]
+
+rodada.insert(1, win)
+rodada.insert(2, loose)
+
+dados.insert()
+
+dados.append(rodada)
+
+
+
 
 #Rodada, wins, loose, Rodada
 dados = []
@@ -53,5 +79,4 @@ for i in range(1,10, 2):
 for i in range(1,10, 1):
   dados.insert(i, loose)
 
-
-print(dados)
+"""
